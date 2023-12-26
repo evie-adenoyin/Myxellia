@@ -1,4 +1,5 @@
 
+import { Box } from "@chakra-ui/react"
 import Header from "../components/header/header"
 import Navbar from "../components/navbar/navbar"
 import Layout from "./layout"
@@ -8,6 +9,7 @@ export default function Home() {
   <Layout>
      <Header/>
      <Navbar/>
+    
   </Layout>
   )
 }

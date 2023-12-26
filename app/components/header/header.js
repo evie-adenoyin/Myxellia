@@ -12,7 +12,7 @@ export default function Header(){
             <Image src={Logo} alt="Company logo" />
         </Box>
         <Spacer/>
-        <Box w='450px' >
+        <Box w='400px' >
             <HeaderActionButton />
         </Box>
        </Flex>
