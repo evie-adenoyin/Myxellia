@@ -6,24 +6,30 @@ import Image from "next/image";
 
 export default function HeaderActionButton (){
     return(
-        <Box color={'white'}>
-           <Center gap={6}> 
-             <Box bg={'white'} borderRadius={4} pb={1} pt={0.5} pr={2.5} pl={2.5} ><AddIcon color={'black'} boxSize={2}/></Box>
+        <Box color={'white'} >
+          <Flex  justifyContent={'space-between'} alignItems={'center'}>
+          
+           <Box ml={-5}>
+             <Flex gap={38}>
+               <Box bg={'white'} borderRadius={4} pb={1} pt={0.5} pr={2.5} pl={2.5} ><AddIcon color={'black'} boxSize={2}/></Box>
             
             <Box ><CalendarIcon boxSize={7}/></Box>
             
             <Box><BellIcon boxSize={8}/></Box>
+             </Flex>
+           </Box>
             
-            <Box ml={10}>
-                <Flex>
-                    <Center gap={1}><Box><Image src={UserIcon} alt="user icon"/></Box>
-                      <Spacer/>
+            <Box ml={10} >
+                <Flex alignItems={'center'} gap={3}>
+                   <Box><Image src={UserIcon} alt="user icon"/></Box>
+                   
                     <Box>Ahmed Ali</Box>
-                      <Spacer/>
-                    <Box mt={-2}><TriangleUpIcon /></Box></Center>
+                      
+                    <Box mt={-2} ><TriangleUpIcon /></Box>
                 </Flex>
             </Box>
-            </Center>
+         
+            </Flex>
         </Box>
      
     )
