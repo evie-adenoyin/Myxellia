@@ -1,11 +1,13 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import WidgetContainer from "../widgets/container/container";
 import Sales from "../widgets/sales/sales";
-import Overview from "../widgets/overview/overview";
+import Analytics from "../widgets/analytics/analytics";
+import Listing from "../widgets/listing/listing";
+import TotalCard from "../widgets/card/total/total";
 
 
 export default function DashboardLayout(){
-     const overviewTopData = [
+     const analyticsTopData = [
         {
             amount:0,
             type:'Total'
@@ -19,7 +21,7 @@ export default function DashboardLayout(){
             type:'Sold Out'
         }, 
     ]
-     const overviewBottomData = [
+     const analyticsBottomData = [
         {
             amount:0,
             type:'Total'
@@ -37,7 +39,7 @@ export default function DashboardLayout(){
             type:'Inactive'
         }, 
     ]
-    const overview=[
+    const analyticsData=[
         {
             header:"Property Overview",
             icon:'icon',
@@ -49,19 +51,41 @@ export default function DashboardLayout(){
             id:2
         },
     ].map((data, key)=>{
-        return <Overview header={data?.header} icon={data?.icon} width={data?.id===1?'140px':'100px'} overviewData={data?.id===1?overviewTopData:overviewBottomData} key={key}/>
+        return <Analytics header={data?.header} icon={data?.icon} height={79} width={data?.id===1?'117px':'88px'} overviewData={data?.id===1?analyticsTopData:analyticsBottomData} key={key} boxHeigth={data?.id===1?'157px':'151px'}/>
     })
+
+  
     return (
         <Box mt={-5} bg={'rgb(247, 247, 247)'} pl={42} pr={42} pt={5} pb={5}>
           <Box>
-            <Flex gap={5}>
-                <Box flex={1}>
+            <Flex gap={4}>
+                <Box flex={1} boxShadow={'sm'} borderRadius={12} h={325}>
                      <Sales />
                 </Box>
-                <Box >
-                   {overview}
+                <Box>
+                   {analyticsData}
+                </Box>      
+            </Flex>
+          </Box>
+          <Box>
+             <Flex gap={4}>
+                <Box flex={2} boxShadow={'sm'} borderRadius={12}>
+                    <Listing/>
                 </Box>
-                
+                <Box boxShadow={'sm'} borderRadius={12} w={418}>
+                   <TotalCard 
+                        thumbnail={{width:154,heigth:155}}  
+                        headerDetails={{amount:'0.00', subheader:'Total Outstanding Balance'}} 
+                        cardHeadetails={{amount:'0.00', subheader:'Outstanding Balance'}}
+                    />
+                </Box>      
+                <Box boxShadow={'sm'} borderRadius={12} w={350}>
+                    <TotalCard 
+                        thumbnail={{width:161,heigth:155}} 
+                        headerDetails={{header:'Top Selling',amount:'0.00', subheader:'Total Sold'}} 
+                        cardHeadetails={{sold:'0', subheader:'Whole units sold'}}
+                    />
+                </Box>      
             </Flex>
           </Box>
         </Box>

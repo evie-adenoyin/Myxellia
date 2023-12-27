@@ -1,14 +1,14 @@
 'use client'
 import { Box, Flex, Text } from "@chakra-ui/react";
-import OverViewSubWidget from "../subwidgets/overview/overviewSubWidget";
+import AnalyticsSubWidget from "../subwidgets/analytics/analyticsSubWidget";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 
 
-export default function Overview({header, icon, overviewData, width}){
+export default function Analytics({header, icon, overviewData, width, height, boxHeigth}){
    
     return (
-        <Box bg={'white'} borderRadius={10} p={5} mb={5}>
-            <Box>
+        <Box bg={'white'}  p={5} mb={4} h={boxHeigth} boxShadow={'sm'} borderRadius={12}>
+            <Box width={407}>
                 <Flex justifyContent={'space-between'} alignItems={'center'}>
                     <Box>
                         <Text fontSize={14} fontWeight={600}>{icon} {header}</Text>
@@ -21,7 +21,7 @@ export default function Overview({header, icon, overviewData, width}){
             <Box mt={4}>
                <Flex justifyContent={'space-between'}>
                  {overviewData.map((data, key)=>{
-                return <OverViewSubWidget key={key} type={data?.type} amount={data?.amount} width={width} />
+                return <AnalyticsSubWidget key={key} type={data?.type} amount={data?.amount} width={width} height={height}/>
                 })}
                </Flex>
               
