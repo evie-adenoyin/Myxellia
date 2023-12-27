@@ -78,7 +78,7 @@ export default function Sales(){
                         <SalesSubWidget amount={'0.00'} type={'Deposit'} color={'#12D8A0'} iconBg={'#12D8A0'}/>
                     </Flex>
                     <Flex mt={3}>
-                        <SalesSubWidget amount={'0.00'} type={'Purchase'} color={'black'} iconBg={'#12D8A0'}/>
+                        <SalesSubWidget amount={'0.00'} type={'Purchase'} bgGradient={'linear(to-r, #191919, #CBCBCB)'}  iconBg={'#12D8A0'}/>
                         <SalesSubWidget amount={'0.00'} type={'Withdrawal'} color={'#FF6A6A'} iconBg={'#FF6A6A'}/>
                     </Flex>
                 </Box>

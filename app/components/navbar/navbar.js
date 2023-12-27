@@ -36,7 +36,7 @@ export default function Navbar(){
     href:'/settings'
 },]
 const page = usePathname()
-console.log(page);
+
     return(
        <Box pl={50} pr={50} pt={5} pb={5} h={20}>
         <Box >
