@@ -1,7 +1,7 @@
 'use client'
 
 import { SearchIcon } from "@chakra-ui/icons"
-import { Box, Center, Flex, Input, InputGroup, InputRightElement, Spacer } from "@chakra-ui/react"
+import { Box, Flex, Input, InputGroup, InputRightElement } from "@chakra-ui/react"
 import Link from "next/link"
 
 
@@ -51,6 +51,7 @@ export default function Navbar(){
                     placeholder='Search...properties, customers here' 
                     fontSize={13}
                     width={'370px'}
+                    bg={'gray.200'}
                     />
                     <InputRightElement width='4.5rem'>
                     <SearchIcon color={'gray'}/>

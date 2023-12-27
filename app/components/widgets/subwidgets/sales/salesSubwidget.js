@@ -5,7 +5,7 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 
 export default function SalesSubWidget({amount, color, type, iconBg}){
     return (
-    <Box border='1px' borderRadius={15}  borderColor='gray.200' p={4} w={200} mr={3}>
+    <Box border='1px' borderRadius={15}  borderColor='gray.200' p={4} w={189} h={73} mr={3}>
         <Text fontSize={20} fontWeight={600} color={color}>&#8358; {amount}</Text>
        <Box >
         <Flex gap={2} alignItems={'center'}>
