@@ -1,10 +1,12 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
-import WidgetContainer from "../widgets/container/container";
 import Sales from "../widgets/sales/sales";
 import Analytics from "../widgets/analytics/analytics";
 import Listing from "../widgets/listing/listing";
 import TotalCard from "../widgets/card/total/total";
-
+import PropertyIcon from '../../../public/Property icon.svg'
+import CustomerIcon from '../../../public/Profile.svg'
+import VeergeIcon from  '../../../public/Frame 23566.svg'
+import Image from "next/image";
 
 export default function DashboardLayout(){
      const analyticsTopData = [
@@ -42,12 +44,12 @@ export default function DashboardLayout(){
     const analyticsData=[
         {
             header:"Property Overview",
-            icon:'icon',
+            icon:PropertyIcon,
             id:1
         },
         {
             header:"Customers Overview",
-            icon:'icon',
+            icon:CustomerIcon,
             id:2
         },
     ].map((data, key)=>{
@@ -87,6 +89,9 @@ export default function DashboardLayout(){
                     />
                 </Box>      
             </Flex>
+          </Box>
+          <Box  position={'absolute'} right={-5}  bottom={7}>
+            <Image src={VeergeIcon} alt="VeergeIcon"/>
           </Box>
         </Box>
     )

@@ -3,6 +3,7 @@ import { AddIcon, BellIcon, CalendarIcon, TriangleUpIcon } from "@chakra-ui/icon
 import { Box, Center, Flex, Spacer } from "@chakra-ui/react";
 import UserIcon from '../../../../public/user.svg'
 import Image from "next/image";
+import Calender from "../../calender/calender";
 
 export default function HeaderActionButton (){
     return(
@@ -11,9 +12,9 @@ export default function HeaderActionButton (){
           
            <Box ml={-5}>
              <Flex gap={38}>
-               <Box bg={'white'} borderRadius={4} pb={1} pt={0.5} pr={2.5} pl={2.5} ><AddIcon color={'black'} boxSize={2}/></Box>
+               <Box bg={'white'} borderRadius={4} pr={2.5} pl={2.5} ><AddIcon color={'black'} boxSize={2} mt={1}/></Box>
             
-            <Box ><CalendarIcon boxSize={7}/></Box>
+            <Box _hover={{cursor:'pointer'}}><Calender icon={<CalendarIcon boxSize={7}/>}/></Box>
             
             <Box><BellIcon boxSize={8}/></Box>
              </Flex>

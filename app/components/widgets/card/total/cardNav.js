@@ -6,7 +6,7 @@ import ArrowLeft from '../../../../../public/arrowleft.svg'
 
 export default function CardNavigation(){
     return(
-            <Box float={'right'}>
+            <Box position={'relative'} right={-24}>
                 <Flex alignItems={'center'} gap={3}>
                     <Box>
                         <Text fontSize={14} fontWeight={400}>1/5</Text>
