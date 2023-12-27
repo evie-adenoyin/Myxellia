@@ -3,10 +3,13 @@ import { ArrowUpIcon } from "@chakra-ui/icons";
 import { Box, Flex, Text } from "@chakra-ui/react";
 
 
-export default function SalesSubWidget({amount, color, type, iconBg}){
+export default function SalesSubWidget({amount, color, type, iconBg, bgGradient}){
     return (
     <Box border='1px' borderRadius={15}  borderColor='gray.200' p={4} w={189} h={73} mr={3}>
-        <Text fontSize={20} fontWeight={600} color={color}>&#8358; {amount}</Text>
+       <Box>
+         {bgGradient? <Text fontSize={20} fontWeight={600} bgClip='text' bgGradient='linear(to-l, #CBCBCB, black)'>&#8358; {amount}</Text>:<Text fontSize={20} fontWeight={600} color={color} >&#8358; {amount}</Text>}
+       </Box>
+        
        <Box >
         <Flex gap={2} alignItems={'center'}>
             <Text fontSize={10}>{type}</Text>

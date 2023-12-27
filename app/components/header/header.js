@@ -2,7 +2,7 @@ import { Box, Flex, Spacer } from "@chakra-ui/react"
 import Logo from '../../../public/Logo.svg'
 import Image from "next/image"
 import HeaderActionButton from "../actionButton/header/headerActionbtn"
-
+import { FaCalendar, FaUserAlt } from 'react-icons/fa'
 
 export default function Header(){
     return(
